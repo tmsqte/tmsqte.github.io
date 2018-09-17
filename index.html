@@ -83,8 +83,9 @@
     <div class="search">
       <div class="content">
         <form class="search-form">
-          <input type="text" name="q" maxlength="20" placeholder=Search>
+          <input type="text" id="local-search-input" name="q" maxlength="20" placeholder=Search>
           <input type="hidden" name='sitesearch' value="http://gaylong.club">
+            <div id="local-search-result"></div>
         </form>
       </div>
     </div>
@@ -130,6 +131,15 @@
     </div>
   </div>
 </footer>
+
+<script type="text/javascript">
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+        search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    searchFunc(path, 'local-search-input', 'local-search-result');
+</script>
 
 
 
