@@ -90,6 +90,14 @@
   <input type="search" placeholder="站内搜索" id="local-search-input" class="local-search-input-cls" >
   <div id="local-search-result" class="local-search-result-cls"></div>
 </span>
+      <script type="text/javascript">
+          var search_path = "search.xml";
+          if (search_path.length == 0) {
+              search_path = "search.xml";
+          }
+          var path = "/" + search_path;
+          searchFunc(path, 'local-search-input', 'local-search-result');
+      </script>
     
     
       <div class="avatar">

@@ -125,8 +125,3 @@ var searchFunc = function (path, search_id, content_id) {
         $('#local-search-result').html('');
     });
 }
-if ($('.local-search').size() && !isMobile.any()) {
-    $.getScript('path/to/search.js', function() {
-        searchFunc("/search.xml", 'local-search-input', 'local-search-result');
-    });
-}
