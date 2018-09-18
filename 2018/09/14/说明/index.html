@@ -1,240 +1,312 @@
-<!DOCTYPE html>
-<html lang=>
-  <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
   
-    <link rel="icon" href="/favicon.ico">
-  
-    
   <title>说明 | gayLong</title>
-  <link rel="stylesheet" href="/style.css">
-  <link rel="stylesheet" href="/lib/jquery.fancybox.min.css">
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="author" content="tmsqte">
+  
+  <meta name="description" content="欢迎大家访问小龙的个人博客,以后这里就是我的小窝啦,希望大家多来看看我鸭。（这个博客暂时还未实现任何功能）
+
+虽然功能没有但是本着既然来了就不能让dalao白来的原则小弟在这粘一段从其他dalao抄来的以词云的方式统计微信好友情况的代码吧import itchatimport numpy as np">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="说明"/>
+  <meta property="og:site_name" content="gayLong"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  
+  
+    <link href="/favicon.png" rel="icon">
+  
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/themes/cerulean.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight-default.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/comment.css" media="screen" type="text/css">
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-sham.min.js"></script>
+  <![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+  
+    <script src="/js/marked.js"></script>
+    <script src="/js/comment.js"></script>
+    <script src="/js/timeago.min.js"></script>
+    <script src="/js/highlight.min.js"></script>
+	<script src="/js/spin.min.js"></script>
+  
+  <!-- analytics -->
+  
+
+
+
 </head>
 
-<body>
-  <header>
-  <div class="header-container">
-    <a class='logo' href="/">
-      <span>gayLong</span>
-    </a>
-    <ul class="right-header">
-      
-        <li class="nav-item">
-          
-            <a href="/" class="item-link">首页</a>
-          
-        </li>
-      
-        <li class="nav-item">
-          
-            <a href="/about" class="item-link">关于</a>
-          
-        </li>
-      
-        <li class="nav-item">
-          
-            <a href="/archives" class="item-link">归档</a>
-          
-        </li>
-      
-        <li class="nav-item">
-          
-            <a href="/tags" class="item-link">标签</a>
-          
-        </li>
-      
-    </ul>
-  </div>
-</header>
+ <body>  
+  <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="/">gayLong</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class="fa fa-archive"></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class="fa fa-folder"></i>Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class="fa fa-tags"></i>Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About me.">
+			  <i class="fa fa-user"></i>About
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
 
-  <main id='post'>
-  <div class="content">
-    <article>
-        <section class="content markdown-body">
-          <h1>说明</h1>
-          <div class='post-meta'>
-            <i class="fa fa-calendar" aria-hidden="true"></i> <time>2018/09/14</time>
-            
-            
-          </div>
-          <h1 id="欢迎大家访问小龙的个人博客-以后这里就是我的小窝啦-希望大家多来看看我鸭。"><a href="#欢迎大家访问小龙的个人博客-以后这里就是我的小窝啦-希望大家多来看看我鸭。" class="headerlink" title="欢迎大家访问小龙的个人博客,以后这里就是我的小窝啦,希望大家多来看看我鸭。"></a>欢迎大家访问小龙的个人博客,以后这里就是我的小窝啦,希望大家多来看看我鸭。</h1><p>（这个博客暂时还未实现任何功能）</p>
+  <div class="container">
+  	<div class="content">
+    	 
+
+
+	
+		<div class="page-header page-header-inverse ">		
+			<h1 class="title title-inverse "> 说明</h1>
+		</div>		
+	
+
+
+
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+	
+
+	<!-- content -->
+	<div class="mypage">		
+	  		
+
+	  <h1 id="欢迎大家访问小龙的个人博客-以后这里就是我的小窝啦-希望大家多来看看我鸭。"><a href="#欢迎大家访问小龙的个人博客-以后这里就是我的小窝啦-希望大家多来看看我鸭。" class="headerlink" title="欢迎大家访问小龙的个人博客,以后这里就是我的小窝啦,希望大家多来看看我鸭。"></a>欢迎大家访问小龙的个人博客,以后这里就是我的小窝啦,希望大家多来看看我鸭。</h1><p>（这个博客暂时还未实现任何功能）</p>
 <p><img src="/2018/09/14/说明/laugh.jpg" alt="滑稽"></p>
 <h1 id="虽然功能没有"><a href="#虽然功能没有" class="headerlink" title="虽然功能没有"></a>虽然功能没有</h1><h2 id="但是本着既然来了就不能让dalao白来的原则"><a href="#但是本着既然来了就不能让dalao白来的原则" class="headerlink" title="但是本着既然来了就不能让dalao白来的原则"></a>但是本着既然来了就不能让dalao白来的原则</h2><h3 id="小弟在这粘一段从其他dalao抄来的以词云的方式统计微信好友情况的代码吧"><a href="#小弟在这粘一段从其他dalao抄来的以词云的方式统计微信好友情况的代码吧" class="headerlink" title="小弟在这粘一段从其他dalao抄来的以词云的方式统计微信好友情况的代码吧"></a>小弟在这粘一段从其他dalao抄来的以词云的方式统计微信好友情况的代码吧</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> itchat</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">from</span> os <span class="keyword">import</span> path</span><br><span class="line"><span class="keyword">from</span> wordcloud <span class="keyword">import</span> WordCloud, STOPWORDS, ImageColorGenerator</span><br><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">import</span> random</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> io</span><br><span class="line"><span class="keyword">import</span> jieba</span><br><span class="line"><span class="string">'''itchat.auto_login(hotReload = True)</span></span><br><span class="line"><span class="string">#  爬取自己好友的相关信息, 返回一个json文件</span></span><br><span class="line"><span class="string">friends = itchat.get_friends(update = True)[0:]'''</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">parse_friends</span><span class="params">()</span>:</span></span><br><span class="line">	itchat.login()</span><br><span class="line">	text = dict()</span><br><span class="line">	friends = itchat.get_friends(update = <span class="keyword">True</span>)</span><br><span class="line">	male = <span class="string">"male"</span></span><br><span class="line">	female = <span class="string">"female"</span></span><br><span class="line">	other = <span class="string">"other"</span></span><br><span class="line">	<span class="keyword">for</span> i <span class="keyword">in</span> friends[<span class="number">1</span>:]:</span><br><span class="line">		sex = i[<span class="string">'Sex'</span>]</span><br><span class="line">		<span class="keyword">if</span> sex == <span class="number">1</span>:</span><br><span class="line">			text[male] = text.get(male, <span class="number">0</span>) + <span class="number">1</span> <span class="comment">#dict.get(key,default)返回键的值, 若不存在则返回default</span></span><br><span class="line">		<span class="keyword">elif</span> sex == <span class="number">2</span>:</span><br><span class="line">			text[female] = text.get(female, <span class="number">0</span>) + <span class="number">1</span></span><br><span class="line">		<span class="keyword">else</span>:</span><br><span class="line">			text[other] = text.get(other, <span class="number">0</span>) + <span class="number">1</span></span><br><span class="line">			</span><br><span class="line">	total = len(friends[<span class="number">1</span>:])</span><br><span class="line">	print(<span class="string">"男性好友:  %.2f%%"</span> % (float(text[male]) / total *<span class="number">100</span>) + <span class="string">"\n"</span> + </span><br><span class="line">	      <span class="string">"女性好友:  %.2f%%"</span> % (float(text[female]) / total *<span class="number">100</span>) + <span class="string">"\n"</span> +</span><br><span class="line">		  <span class="string">"不明性别好友:  %.2f%%"</span> % (float(text[other]) / total *<span class="number">100</span>) )</span><br><span class="line">	</span><br><span class="line">	draw(text)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">draw</span><span class="params">(datas)</span>:</span></span><br><span class="line">	<span class="keyword">for</span> key <span class="keyword">in</span> datas.keys():</span><br><span class="line">		plt.bar(key, datas[key])</span><br><span class="line">		</span><br><span class="line">	plt.legend()</span><br><span class="line">	plt.xlabel(<span class="string">'sex'</span>)</span><br><span class="line">	plt.ylabel(<span class="string">'rate'</span>)</span><br><span class="line">	plt.title(<span class="string">"Gender of Alfred's friends"</span>)</span><br><span class="line">	plt.show()</span><br><span class="line"></span><br><span class="line">	</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">parse_signature</span><span class="params">()</span>:</span></span><br><span class="line">	itchat.auto_login(hotReload = <span class="keyword">True</span>)</span><br><span class="line">	siglist = []</span><br><span class="line">	friends = itchat.get_friends(update = <span class="keyword">True</span>)[<span class="number">1</span>:]</span><br><span class="line">	<span class="keyword">for</span> i <span class="keyword">in</span> friends:</span><br><span class="line">		signature = i[<span class="string">"Signature"</span>].strip().replace(<span class="string">"span"</span>, <span class="string">""</span>).replace(<span class="string">"class"</span>, <span class="string">""</span>).replace(<span class="string">"emoji"</span>, <span class="string">""</span>)</span><br><span class="line">		rep = re.compile(<span class="string">"1f\d+\w*|[&lt;&gt;/=]"</span>)</span><br><span class="line">		signature = rep.sub(<span class="string">""</span>, signature)</span><br><span class="line">		siglist.append(signature)</span><br><span class="line">	text = <span class="string">""</span>.join(siglist)</span><br><span class="line">	<span class="keyword">with</span> io.open(<span class="string">'text.txt'</span>, <span class="string">'w'</span>, encoding = <span class="string">'utf-8'</span>) <span class="keyword">as</span> f:</span><br><span class="line">		wordlist = jieba.cut(text, cut_all = <span class="keyword">True</span>)</span><br><span class="line">		word_space_split = <span class="string">" "</span>.join(wordlist)</span><br><span class="line">		f.write(word_space_split)</span><br><span class="line">		f.close()</span><br><span class="line">		</span><br><span class="line">		</span><br><span class="line">		</span><br><span class="line">		</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">draw_signature</span><span class="params">()</span>:</span></span><br><span class="line">	text = open(<span class="string">u'text.txt'</span>, encoding =<span class="string">'utf-8'</span>).read()</span><br><span class="line">	coloring = np.array(Image.open(<span class="string">'jingqi_de_katong_dongwu-005.jpg'</span>))</span><br><span class="line">	my_wordcloud = WordCloud(background_color = <span class="string">"white"</span>, max_words = <span class="number">2000</span>,</span><br><span class="line">	                        mask = coloring, max_font_size = <span class="number">60</span>, random_state = <span class="number">42</span>, scale = <span class="number">2</span>,</span><br><span class="line">							font_path = <span class="string">"DroidSansFallbackFull.ttf"</span>).generate(text)</span><br><span class="line">	image_colors = ImageColorGenerator(coloring)</span><br><span class="line">	plt.imshow(my_wordcloud.recolor(color_func = image_colors))</span><br><span class="line">	plt.imshow(my_wordcloud)</span><br><span class="line">	plt.axis(<span class="string">"off"</span>)</span><br><span class="line">	plt.savefig(<span class="string">"D:/PyProgram/cloud.jpg"</span>, dpi = <span class="number">200</span>) <span class="comment"># 如果savefig放在plt.show()后面会造成保存空白图的问题</span></span><br><span class="line">	plt.show()</span><br><span class="line"></span><br><span class="line">				</span><br><span class="line"><span class="comment">#parse_friends()</span></span><br><span class="line"><span class="comment">#parse_signature()</span></span><br><span class="line"><span class="comment">#draw_signature()</span></span><br></pre></td></tr></table></figure>
 <h4 id="最后还是给大家劈个叉，祝各位晚安吧。"><a href="#最后还是给大家劈个叉，祝各位晚安吧。" class="headerlink" title="最后还是给大家劈个叉，祝各位晚安吧。"></a>最后还是给大家劈个叉，祝各位晚安吧。</h4><p><img src="/2018/09/14/说明/picha.jpg" alt="给各位dalao劈叉"></p>
-<h5 id="未完待续…"><a href="#未完待续…" class="headerlink" title="未完待续…."></a>未完待续….</h5>
-        </section>
-    </article>
+<h5 id="未完待续…"><a href="#未完待续…" class="headerlink" title="未完待续…."></a>未完待续….</h5>	  
+	</div>
+
+	<!-- recommended posts -->
+	
+
+	<div>
+  	<center>
+	<div class="pagination">
+<ul class="pagination">
+	 
+</ul>
+</div>
+
+    </center>
+	</div>
+
+    <!-- share -->
     
-        <!-- disqus 评论框 start -->
-        <div class="comment">
-            <div id="disqus_thread" class="disqus-thread">
-              <i>Loading comments box needs to over the wall</i>
-            </div>
-        </div>
-        <!-- disqus 评论框 end -->
-    
-    
-        <!-- livere 评论框 start -->
-        <div class="comment">
-            <div id="lv-container" data-id="city" data-uid="your_livere_uid"></div>
-        </div>
-        <!-- livere 评论框 end -->
         
-  </div>
-  <aside>
+    <div class="bdsharebuttonbox">
+        <a href="#" class="bds_more" data-cmd="more"></a>
+        <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+        <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+        <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+        <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+        <a href="#" class="bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+        <a href="#" class="bds_evernotecn" data-cmd="evernotecn" title="分享到印象笔记"></a>
+        <a href="#" class="bds_youdao" data-cmd="youdao" title="分享到有道云笔记"></a>
+        <a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+    </div>
+    <script>
+        window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"24"},"share":{}};
+        with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+    </script>
+
+
+        
+
     
-    <div class="toc-container">
-        <h1>目录</h1>
-        <div class="content">
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#欢迎大家访问小龙的个人博客-以后这里就是我的小窝啦-希望大家多来看看我鸭。"><span class="toc-number">1.</span> <span class="toc-text">欢迎大家访问小龙的个人博客,以后这里就是我的小窝啦,希望大家多来看看我鸭。</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#虽然功能没有"><span class="toc-number">2.</span> <span class="toc-text">虽然功能没有</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#但是本着既然来了就不能让dalao白来的原则"><span class="toc-number">2.1.</span> <span class="toc-text">但是本着既然来了就不能让dalao白来的原则</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#小弟在这粘一段从其他dalao抄来的以词云的方式统计微信好友情况的代码吧"><span class="toc-number">2.1.1.</span> <span class="toc-text">小弟在这粘一段从其他dalao抄来的以词云的方式统计微信好友情况的代码吧</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#最后还是给大家劈个叉，祝各位晚安吧。"><span class="toc-number">2.1.1.1.</span> <span class="toc-text">最后还是给大家劈个叉，祝各位晚安吧。</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#未完待续…"><span class="toc-number">2.1.1.1.1.</span> <span class="toc-text">未完待续….</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
-        </div>
-    </div>
-    
-  </aside>
-</main>
-
-<!-- disqus 公共JS代码 -->
-<script type="text/javascript">
-  /* * * CONFIGURATION VARIABLES * * */
-  var disqus_shortname = "your_disqus_shortname";
-  var disqus_identifier = "http://gaylong.club/2018/09/14/说明/";
-  var disqus_url = "http://gaylong.club/2018/09/14/说明/";
-
-  isAgent(getDisqus)
-
-  // determine user agent in China
-  function isAgent(cb) {
-    var url = '//graph.facebook.com/feed?callback=h';
-    var xhr = new XMLHttpRequest();
-    var called = false;
-    xhr.open('GET', url);
-    xhr.onreadystatechange = function() {
-      if (xhr.readyState === 4 && xhr.status === 200) {
-      called = true;
-      cb(true);
-      }
-    };
-    xhr.send();
-    // timeout 1s, this facebook API is very fast.
-    setTimeout(function() {
-      if (!called) {
-      xhr.abort();
-      cb(false)
-      }
-    }, 1000);
-  }
-
-  function getDisqus(isAgent) {
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; 
-    dsq.async = true
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq)
-  }
-</script>
-<!-- disqus 公共JS代码 end -->
-
-
-<script type="text/javascript">
-  (function(d, s) {
-      var j, e = d.getElementsByTagName(s)[0];
-
-      if (typeof LivereTower === 'function') { return; }
-
-      j = d.createElement(s);
-      j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-      j.async = true;
-
-      e.parentNode.insertBefore(j, e);
-  })(document, 'script');
-</script>
-
-
-  <footer>
-  <div class="copyright">
-    <div>
-      &copy; 2018 | Powered by <a href="https://hexo.io" target="_blank">Hexo</a>&nbsp
-    </div>
-    <div>
-      Theme by <a href="https://github.com/lewis-geek/hexo-theme-Aath" target="_blank">Aath</a>
-    </div>
-  </div>
-</footer>
-<!--  11-20  -->
-
-<script type="text/javascript">
-    var search_path = "search.xml";
-    if (search_path.length == 0) {
-        search_path = "search.xml";
-    }
-    var path = "/" + search_path;
-    searchFunc(path, 'local-search-input', 'local-search-result');
-</script>
-
-
-<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-<script src="/lib/in-view.min.js"></script>
-<script src="/lib/lodash.min.js"></script>
-<script>
-  var isDown = true
-  var oldY = 0
-  inView.offset(50)
-
-  document.body.addEventListener('touchstart', function(){});
+	
+	<!-- comment -->
+	
+<section id="comment">
+  <h2 class="title">Comments</h2>
+    	 
+	 <div id="comment-thread"></div>
+	 <div id="loading-spin"></div>
+	 <script type="text/javascript">
+	   getComments({
+           type: "github" ? "github" : "github",       
+	       user: "wzpan",
+	       repo: "hexo-theme-freemind-blog",
+		   client_id: "bf7d4ba11877db88543e",
+           client_secret: "bff8a6b06b745c0bfcdccbe225623ea8e2a057bb",
+		   no_comment: "No comments yet. Press the button and go to comment now!",
+		   go_to_comment: "Go to comment",
+		   no_issue: "no_issue",
+		   issue_title: "说明",
+		   issue_id: "",
+		   btn_class: "btn btn-primary",
+		   comments_target: "#comment-thread",
+		   loading_target: "#loading_spin"
+		   });
+	 </script>
   
-  window.addEventListener('scroll', _.throttle(e => {
-    var currentY = window.scrollY
-    if((oldY - currentY) < 0) {
-      isDown = true
-    } else {
-      isDown = false
-    }
-    oldY = currentY
-  }, 250))
+</section>
 
-  $("article img").each(function() {
-      var strA = "<a data-fancybox='gallery' href='" + this.src + "'></a>";
-      $(this).wrapAll(strA);
-  });
 
-  $('.toc-link').each(function() {
-      var href = $(this).attr("href");
-      
-      inView(href).on('exit', () => {
-        if (isDown) {
-          handleActive(href)
-        }
-      })
+	</div> <!-- col-md-9/col-md-12 -->
+		
+	
+	<div id="side_meta">
+		<div class="col-md-3" id="post_meta"> 
 
-      inView(href).on('enter', () => {
-        if (!isDown) {
-          handleActive(href)
-        }
-      })
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2018-09-14 
+	</div>
+	
 
-      this.onclick = function(e) {
-        var pos = $(href).offset().top - 10;
-        $("html,body").animate({scrollTop: pos}, 300);
-        setTimeout(() => {
-          handleActive(href)
-        }, 350)
-        return false
-      }
-  })
+	<!-- categories -->
+    
 
-  function handleActive(href) {
-    document.querySelectorAll('.toc-link').forEach(elm => {
-      elm.classList.remove('active')
-    })
-    document.querySelector(".toc [href='"+ href +"']").classList.add('active')
-  }
+	<!-- tags -->
+	
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	</div>
+		
+
+</div><!-- row -->
+
+<script type="text/javascript">
+var disqus_shortname = 'your_disqus_shortname';
+(function(){
+  var dsq = document.createElement('script');
+  dsq.type = 'text/javascript';
+  dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+}());
 </script>
-<script src="/lib/jquery.fancybox.min.js"></script>
+
+
+
+	</div>
+  </div>
+  <div class="container-narrow">
+  <footer> <p>
+  &copy; 2018 tmsqte
+  
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+</p> </footer>
+</div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+<!-- syntax highlighting -->
+
+  <script>
+  marked.setOptions({
+    highlight: function (code, lang) {
+        return hljs.highlightAuto(code).value;
+    }
+  });
+  function Highlighting(){
+    var markdowns = document.getElementsByClassName('markdown');
+    for(var i=0;i<markdowns.length;i++){
+        if(markdowns[i].innerHTML) markdowns[i].innerHTML =marked(markdowns[i].innerHTML);
+    }
+  }
+  window.addEventListener('DOMContentLoaded', Highlighting, false);
+  window.addEventListener('load', Highlighting, false);
+  </script>
 
 
 </body>
-</html>
+   </html>
