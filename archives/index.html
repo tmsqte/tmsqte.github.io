@@ -15,18 +15,6 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/lib/jquery.fancybox.min.css">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!--  24-35 -->
-  <script src="/js/search.js"></script>
-  
-  <script type="text/javascript">
-      var search_path = "search.xml";
-      if (search_path.length == 0) {
-          search_path = "search.xml";
-      }
-      var path = "/" + search_path;
-      searchFunc(path, 'local-search-input', 'local-search-result');
-  </script>
-  
 </head>
 
 <body>
@@ -98,6 +86,17 @@
     </div>
   </div>
 </footer>
+<!--  11-22 -->
+<script src="/js/search.js"></script>
+
+<script type="text/javascript">
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+        search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    searchFunc(path, 'local-search-input', 'local-search-result');
+</script>
 
 
 
